@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: auto;
-}
+} */
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
@@ -137,10 +137,25 @@ img {
 .link-nav-list {
   text-decoration: none;
   color: #2e2f42;
-  display: block;
   padding-top: 24px;
   padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
+.item-list-nav-link {
+  height: 48px;
+}
+.link-nav-list:hover::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #404bbf;
+}
+
 .address .link-address:focus,
 .address .link-address:hover {
   color: #404bbf;
@@ -153,9 +168,18 @@ img {
 .hero-section {
   font-family: "Roboto", sans-serif;
   background-color: #2e2f42;
+  min-width: 1440px;
   height: 600px;
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office\ 1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -183,7 +207,9 @@ img {
   margin-top: 48px;
   cursor: pointer;
 }
+
 /* SECTION 1 */
+
 .first-section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -194,6 +220,24 @@ img {
   padding-right: 15px;
   margin-left: 0;
   margin-right: auto;
+}
+
+.list-image {
+  display: flex;
+  gap: 24px;
+  padding: 0 15px;
+}
+
+.container-list-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background: #f4f4fd;
+  margin: 0;
 }
 
 .list-section {
@@ -223,7 +267,9 @@ img {
   letter-spacing: 0.32px;
   display: block;
 }
+
 /* SECTION 2  */
+
 .section-team {
   background-color: #f4f4fd;
   padding-top: 120px;
@@ -283,6 +329,29 @@ img {
   text-align: center;
 }
 
+.list-social-media-icon {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.item-social-media-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+}
+.social-media-icon {
+  background-color: #ffffff;
+}
+.item-social-media-icon:hover {
+  background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* SECTION 3 */
 
 .third-section {
@@ -319,6 +388,34 @@ img {
   display: block;
   width: calc((100% - 48px) / 3);
 }
+
+.overlay-container {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-item:hover .overlay {
+  transform: translateY(0%);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  color: var(--CLOUD, #f4f4fd);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .product-info {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -354,14 +451,19 @@ img {
   padding-bottom: 100px;
 }
 .container-footer {
+  display: flex;
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: 0;
   margin-right: auto;
   height: 312px;
+  gap: 120px;
 }
 
+.left-container-footer {
+  display: inline-block;
+}
 .logo-in-footer {
   color: #4d5ae5;
   font-family: "Raleway", sans-serif;
@@ -373,6 +475,8 @@ img {
   text-decoration: none;
   margin-bottom: 16px;
   display: inline-block;
+  width: 115px;
+  height: 24px;
 }
 .part-of-logo-in-footer {
   color: #f4f4fd;
@@ -384,6 +488,7 @@ img {
   text-transform: uppercase;
 }
 .finish-page {
+  display: block;
   font-family: "Roboto", sans-serif;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.32px;
@@ -391,4 +496,28 @@ img {
   width: 264px;
   text-align: left;
   padding-top: 16px;
+  margin-top: 20px;
+}
+.right-container-footer {
+  display: block;
+}
+.footer-title {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.footer-list-social-media-icon {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+.footer-social-media-icon:hover {
+  background-color: #31d0aa;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
