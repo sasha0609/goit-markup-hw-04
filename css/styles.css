@@ -40,27 +40,18 @@ img {
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
 }
 .page-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-.container-header {
-  display: flex;
-  width: 1158px;
-  margin-left: 0;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .link {
   text-decoration: none;
   color: #434455;
@@ -129,7 +120,6 @@ img {
   list-style-type: none;
   display: flex;
   gap: 40px;
-  padding: 24px 0;
 }
 
 .nav-list .link-nav-list:hover,
@@ -150,12 +140,13 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-list-nav-link {
-  height: 48px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-nav-list::after {
   content: "";
   position: absolute;
   left: 0;
+  width: 100%;
   bottom: -1px;
   height: 4px;
   border-radius: 2px;
@@ -231,18 +222,10 @@ img {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-.container-first-section {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: 0;
-  margin-right: auto;
-}
 
 .list-image {
   display: flex;
   gap: 24px;
-  padding: 0 15px;
 }
 
 .container-list-image {
@@ -259,13 +242,11 @@ img {
 }
 
 .list-section {
-  padding-right: 15px;
-  padding-left: 15px;
   display: flex;
   gap: 24px;
 }
 .list-section-item {
-  width: calc ((100% - 72px) / 4);
+  width: 264px;
 }
 .list-item-title {
   font-family: "Roboto", sans-serif;
@@ -338,7 +319,6 @@ img {
   background-color: #ffffff;
   color: #2e2f42;
   text-align: center;
-  padding-top: 32px;
   margin-bottom: 8px;
 }
 .members-post {
@@ -346,7 +326,7 @@ img {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.32px;
   background-color: #ffffff;
-  padding-bottom: 32px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
@@ -388,13 +368,7 @@ img {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-.container-third-section {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: 0;
-  margin-right: auto;
-}
+
 .title-portfolio {
   font-family: "Roboto", sans-serif;
   font-size: 36px;
@@ -451,7 +425,6 @@ img {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
-  margin-bottom: 8px;
 }
 .products {
   font-family: "Roboto", sans-serif;
@@ -486,9 +459,6 @@ img {
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 0;
-  margin-right: auto;
-  height: 312px;
   gap: 120px;
   align-items: baseline;
 }
@@ -501,7 +471,7 @@ img {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.17; /* 116.667% */
+  line-height: 1.17;
   letter-spacing: 0.54px;
   text-transform: uppercase;
   text-decoration: none;
@@ -515,25 +485,23 @@ img {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.17; /* 116.667% */
+  line-height: 1.17;
   letter-spacing: 0.54px;
   text-transform: uppercase;
 }
 .finish-page {
   font-family: "Roboto", sans-serif;
-  line-height: 1.5; /* 150% */
+  line-height: 1.5;
   letter-spacing: 0.32px;
   color: #f4f4fd;
   width: 264px;
   text-align: left;
-  padding-top: 16px;
-  margin-top: 20px;
 }
 
 .footer-page {
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5em;
+  line-height: 24px;
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
